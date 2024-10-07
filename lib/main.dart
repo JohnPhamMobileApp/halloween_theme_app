@@ -29,7 +29,6 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-<<<<<<< HEAD
 class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   int _counter = 0;
   bool _isTextVisible = false; // Track visibility of animated text
@@ -52,18 +51,10 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
       return const Text('Image not found');
     }),
   ];
-=======
-class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateMixin {
-  int _counter = 0;
-  bool _isTextVisible = false; // Track visibility of animated text
-  late AnimationController _controller; // Animation controller
-  late Animation<double> _scaleAnimation; // Scale animation
->>>>>>> de5e79ad331caed5cedf0a3a385d56ac830f0e8a
 
   @override
   void initState() {
     super.initState();
-<<<<<<< HEAD
 
     // Animation controller for moving images
     _imageAnimationController = AnimationController(
@@ -79,23 +70,12 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
       vsync: this,
     );
     _scaleAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(_textController);
-=======
-    _controller = AnimationController(
-      duration: const Duration(milliseconds: 500),
-      vsync: this,
-    );
-    _scaleAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(_controller);
->>>>>>> de5e79ad331caed5cedf0a3a385d56ac830f0e8a
   }
 
   @override
   void dispose() {
-<<<<<<< HEAD
     _imageAnimationController.dispose();
     _textController.dispose();
-=======
-    _controller.dispose();
->>>>>>> de5e79ad331caed5cedf0a3a385d56ac830f0e8a
     super.dispose();
   }
 
@@ -109,15 +89,9 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
     setState(() {
       _isTextVisible = !_isTextVisible;
       if (_isTextVisible) {
-<<<<<<< HEAD
         _textController.forward();
       } else {
         _textController.reverse();
-=======
-        _controller.forward();
-      } else {
-        _controller.reverse();
->>>>>>> de5e79ad331caed5cedf0a3a385d56ac830f0e8a
       }
     });
   }
@@ -129,7 +103,6 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-<<<<<<< HEAD
       body: Stack(
         children: [
           Center(
@@ -175,34 +148,6 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
             },
           ),
         ],
-=======
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Image.asset('assets/images/halloween.jpg'), // child
-            const Text(
-              'TRAPS SET OFF:',
-              style: TextStyle(color: Colors.orange), // Set text color to orange
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium?.copyWith(color: Colors.orange), // Set text color to orange
-            ),
-            // Animated text
-            ScaleTransition(
-              scale: _scaleAnimation,
-              child: Opacity(
-                opacity: _isTextVisible ? 1.0 : 0.0,
-                child: const Text(
-                  'XD Happy Halloween! T_T\n YOU FOUND IT!!!',
-                  style: TextStyle(fontSize: 24, color: Colors.orange), // Text style
-                ),
-              ),
-            ),
-          ],
-        ),
->>>>>>> de5e79ad331caed5cedf0a3a385d56ac830f0e8a
       ),
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
