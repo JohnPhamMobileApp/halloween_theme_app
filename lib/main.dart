@@ -12,6 +12,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 9eeb87e6e0412365702e423fa3aae605da8e1337
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
@@ -34,12 +38,20 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9eeb87e6e0412365702e423fa3aae605da8e1337
       _counter++;
     });
   }
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 9eeb87e6e0412365702e423fa3aae605da8e1337
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -64,7 +76,11 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
+<<<<<<< HEAD
       ), 
+=======
+      ),
+>>>>>>> 9eeb87e6e0412365702e423fa3aae605da8e1337
     );
   }
 }
