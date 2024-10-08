@@ -1,16 +1,18 @@
 name: halloween_theme_app
 description: "A new Flutter project."
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none' 
 
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.5.2
+  sdk: ">=3.5.0 <4.0.0"  #version range constraint
 
 dependencies:
   flutter:
     sdk: flutter
+
   cupertino_icons: ^1.0.8
+  just_audio: ^0.9.18
 
 dev_dependencies:
   flutter_test:
@@ -25,3 +27,4 @@ flutter:
     - assets/images/ghost.jpg
     - assets/images/pumpkin.jpg
     - assets/images/bat.jpg
+    - assets/audio/spooky.mp3
